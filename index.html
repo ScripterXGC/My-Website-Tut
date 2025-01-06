@@ -3,60 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaire Discord Bot</title>
+    <title>Alaire - Your Discord Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Alaire</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#invite">Invite</a></li>
-                <li><a href="#warning">Warning</a></li>
-            </ul>
-        </nav>
+        <div class="navbar">
+        <img src="pic.png" width="50" height="50" >
+            <h1>Alaire</h1>
+            <nav>
+                <link><a href="#about">About</a></link>
+                <link><a href="#commands">Commands</a></link>
+                <link><a href="#commads">Information</a></link>
+                <link><a href="#contact">Contact</a></link>
+            </nav>
+        </div>
     </header>
-
-    <section id="about" class="section">
-        <h2>About Alaire</h2>
-        <p>Alaire is an advanced Discord bot designed to enhance your server with a wide range of features, including moderation tools, music, games, and more!</p>
-    </section>
-
-    <section id="features" class="section">
-        <h2>Features</h2>
-        <ul>
-            <li>Automated Moderation [Beta!]</li>
-            <li>Style [Ongoing!]</li>
-            <li>Fun Commands [Ongoing!]</li>
-            <li>Customizable Settings [Beta!]</li>
-            <li>24/7 Uptime</li>
-        </ul>
-    </section>
     
-    <section id="warning" class="section">
-    	<h2>Warning!</h2>
-    	<ul>
-    		<p>The bot is still in beta!</p>
-    		<p>There maybe error and bugs in the bot.</p>
-    		<p>24/7 is not yet available.</p>
-    		<p>ETA Full Release: 2025 May 20</p>
-    		<p>Thank you for being with us.</p>
-    	</ul>
-    </section>
-
-    <section id="invite" class="section">
-        <h2>Invite Alaire to Your Server</h2>
-        <p>Click below to invite Alaire to your server and enjoy all the amazing features!</p>
-        <button onclick="inviteBot()">Invite Alaire</button>
-    </section>
-
-   
-
+    <main>
+        <section id="home" class="hero">
+            <h2>Welcome to Alaire!</h2>
+            <p>The Discord bot that makes your server amazing.</p>
+            <button class="cta-btn" onclick="openDialog()">Learn More</button>
+            <button class="cta-btn" onclick="invite()">Invite</button>
+            <button class="cta-btn" onclick="server()">Support Server</button>
+        </section>
+        
+        <section id="about">
+            <h2>About Alaire</h2>
+            <p>Alaire is a powerful bot designed to help you manage your Discord server with ease. It includes fun features, moderation tools, and more.</p>
+            <p>[-----------]</p>
+            <p>Alaire is made with BotForge, a cilent made with Discord.js for nodejs. Sadly, BotForge is in beta which means, Alaire is in beta too.</p>
+        </section>
+        
+        <section id="commands">
+            <h2>Commands</h2>
+            <ul>
+                <li>/utilty help - Displays a list of commands</li>
+                <li>/moderation ban [reason] [user] - Bans a user from the server</li>
+                <li>/moderation kick [reason] [user] - Kicks a user in the server</li>
+                <li>/utilty embed-creator [title] [description] - Makes a custom embed</li>
+                <li>/music play [title] - Plays music from any playfrom eg. Youtube</li>
+                <li>/utilty info - Get information about the bot</li>
+            </ul>
+        </section>
+        
+        <section id="commads" >
+        	<h2>Information</h2>
+        	<ul>
+        		<li>Alaire is hosted with DivaHost, a free hosting website for Discors Bots</li>
+        		<li>Alaire is also hosted with BotForge a client for discord.js which is in beta. Alaire will also be in beta.</li>
+        		<li>There is downtime becuase everyday i make new commands and i need to restart index.js</li>
+        	</ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Have questions or need help? Reach out on Discord or visit our support page.</p>
+        </section>
+    </main>
+    
     <footer>
-        <p>&copy; 2025 Alaire Discord Bot. All Rights Reserved.</p>
+        <p>&copy; 2025 Alaire Bot. All rights reserved.</p>
     </footer>
+
+    <!-- Modal Dialog -->
+    <div id="dialog" class="dialog-overlay" onclick="closeDialog()">
+        <div class="dialog-content">
+            <h3>About Alaire</h3>
+            <p>Alaire is a feature-packed Discord bot with the capability to automate tasks, play games, moderate servers, and much more!</p>
+            <button onclick="closeDialog()">Close</button>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>
